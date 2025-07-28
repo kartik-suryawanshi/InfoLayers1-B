@@ -1,0 +1,62 @@
+{
+  "scoring": {
+    "base_weights": {
+      "semantic": 0.4,
+      "keyword": 0.3,
+      "title": 0.2,
+      "penalty": 0.1
+    },
+    "dynamic_adjustment": true,
+    "confidence_threshold": 0.6
+  },
+  "document_priorities": {
+    "food_contractor": {
+      "mains": 3.0,
+      "entrees": 2.5,
+      "sides": 1.0,
+      "starters": 0.5
+    },
+    "researcher": {
+      "methodology": 3.0,
+      "results": 2.5,
+      "discussion": 2.0,
+      "introduction": 1.0
+    },
+    "analyst": {
+      "financial": 3.0,
+      "strategy": 2.5,
+      "analysis": 2.0,
+      "overview": 1.0
+    }
+  },
+  "performance": {
+    "batch_size": 32,
+    "cache_embeddings": true,
+    "max_cache_size": 1000,
+    "confidence_scoring": true
+  },
+  "constraints": {
+    "positive_patterns": [
+      "vegetarian|vegan|gluten.?free|dairy.?free",
+      "budget.?friendly|affordable|cheap|inexpensive",
+      "quick|fast|easy|simple|convenient",
+      "healthy|organic|natural|fresh",
+      "corporate|business|professional|formal",
+      "group|shared|collaborative|team",
+      "student|youth|young|college",
+      "urgent|immediate|asap|quickly",
+      "comprehensive|detailed|thorough|complete"
+    ],
+    "negative_patterns": [
+      "meat|beef|pork|chicken|fish",
+      "expensive|luxury|premium|high.?end|exclusive",
+      "breakfast|lunch",
+      "slow|complicated|difficult|complex",
+      "unhealthy|processed|artificial",
+      "casual|informal|relaxed",
+      "individual|personal|private",
+      "low.?priority|non.?urgent|whenever",
+      "brief|summary|overview|basic"
+    ]
+  }
+} 
